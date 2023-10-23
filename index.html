@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hzlnn Webpage</title>
+    <link rel="stylesheet" href="style.css">  
+	<script src="https://kit.fontawesome.com/f34ada4875.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+     <div class="container">
+        <nav>
+            <img src="logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+				<i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+			<i class="fas fa-bars" onclick="openmenu()"></i>
+         </nav> 
+		 <div class="header-text">
+			 <p>Section 3-A</p>
+			 <h1>Hi, I'm <span>Hazel Anne</span><br>From Sto.tomas</h1>
+		 </div>
+    </div>
+</div>
+<!-- -----------about----------- -->
+<div id="about">
+	<div class="container">
+		<div class="row">
+			<div class="about-col-1">
+				<img src="user.jpg">
+			</div>
+			<div class="about-col-2">
+				<h1 class="sub-title">About Me</h1>
+				<p>Hello, I'm Hazel Anne A. Conel a Third year College Student From Pamantasan ng Lungsod ng San Pablo. Im taking Bachelor of Science in Information Technology in the Major of Web and Game Development.</p>
+				
+				<div class="tab-titles">
+					<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+					<p class="tab-links" onclick="opentab('experience')">Experience</p>
+					<p class="tab-links" onclick="opentab('education')">Education</p>
+				</div>
+				<div class="tab-contents active-tab" id="skills">
+					<ul>
+						<li><span>HTML/CSS/JS/PHP</span><br>Designing/making Website or Webpages</li>
+						<li><span>Web Development</span><br>Web app Development</li>
+						<li><span>App Developoment</span><br>Building Android/iOS apps</li>
+					</ul>
+				</div>
+				<div class="tab-contents" id="experience">
+					<ul>
+						<li><span>No Experience</span><br>I'm still studying and want to learn more about HTML,CSS,JS,Php and More about Coding</li>
+					</ul>
+				</div>
+				<div class="tab-contents" id="education">
+					<ul>
+						<li><span>2021-Present</span><br>Bachelor of Science in Imformation Technology</li>
+						<li><span>2018-2020</span><br>Accountancy in Bussiness Management</li>
+						<li><span>2015-2018</span><br>Grade 7 to Grade 10</li>
+						<li><span>2010-2015</span><br>Grade 1 to Grade 6</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+<!-- ------------portfolio--------- -->
+	
+<div id="portfolio">
+	<div class="container">
+		<h1 class="sub-title">My Portfolio</h1>
+		<div class="work-list">
+			<div class="work">
+				<img src="work-1.jpg">
+				<div class="layer">
+					<h3>My Html Resume</h3>
+					<p>For the first time trying a basic code in html make me want to learn more about making a website or webpage.</p>
+					<a href="https://hazel-nuts8.github.io/html-MyResume/"><i class="fas fa-external-link-alt"></i></a>
+				</div>
+			</div>
+			<div class="work">
+				<img src="work-2.jpg">
+				<div class="layer">
+					<h3>Learning with Css</h3>
+					<p>While learning a lot about Html, and then I realize there will be more. I got more excited knowing about them. Wanting me to learn more and more</p>
+					<a href="https://hazel-nuts8.github.io/Page-Layout/"><i class="fas fa-external-link-alt"></i></a>
+				</div>
+			</div>
+			<div class="work">
+				<img src="work-3.jpg">
+				<div class="layer">
+					<h3>Realizing that there's a big world in Coding or IT</h3>
+					<p> There's a time that runs in my mind like "bakit ba ako nag IT?" like it's so confusing, but if you're willing to learn you do not need to memorize all the code but to understand it.</p>
+					<a href="#"><i class="fas fa-external-link-alt"></i></a>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="btn">See more</a>
+	</div>
+</div>	
+	
+<!-- ----------contact----------- -->
+	
+<div id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="contact-left">
+				<h1 class="sub-title">Contact Me</h1>
+				<p><i class="fas fa-phone-square-alt"></i> 09756471481</p>
+				<a href="https://myaccount.google.com/?hl=en_GB"><p><i class="fas fa-paper-plane"></i> hazelanneconel@gmail.com</p></a>
+				<div class="social-icons">
+					<a href="https://www.facebook.com/jea.yupanel"><i class="fab fa-facebook"></i></a>
+					<a href="https://www.instagram.com/call_mehaze/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.tiktok.com/@callmehaze"><i class="fab fa-tiktok"></i></a>
+					<a href="https://www.tiktok.com/@callmehaze"><i class="fab fa-twitter"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<p>Copyright © Hazel. Always with you<i class="fas fa-heart"></i></p>
+	</div>
+</div>
+	
+
+	
+<script>
+	
+	var tablinks = document.getElementsByClassName("tab-links");
+	var tabcontents = document.getElementsByClassName("tab-contents");
+	
+	function opentab(tabname){
+		for(tablink of tablinks){
+			tablink.classList.remove("active-link");
+		}
+		for(tabcontent of tabcontents){
+			tabcontent.classList.remove("active-tab");
+		}
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabname).classList.add("active-tab");
+	}
+
+</script>
+	
+<script>
+	
+	var sidemenu = document.getElementById("sidemenu");
+	
+	function openmenu(){
+		sidemenu.style.right = "0";
+	}
+	function closemenu(){
+		sidemenu.style.right = "-200px";
+	}
+	
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
